@@ -1,0 +1,1815 @@
+---
+import mano from "../assets/mano.png";
+import homeIcon from "../assets/icon/home.png";
+import prevencionIcon from "../assets/icon/group.png";
+import senalesIcon from "../assets/icon/señales.png";
+import videoIcon from "../assets/icon/video.png";
+---
+
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Estamos para cuidarte</title>
+
+    <meta
+        name="description"
+        content="Información para niñas, niños y adolescentes sobre sus derechos, seguridad, prevención y cómo pedir ayuda."
+    />
+
+    <meta name="theme-color" content="#6d28d9" />
+</head>
+
+
+<body class="bg-white text-[#211A3D] antialiased">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header
+    class="sticky top-0 z-50 border-b border-purple-100 bg-white/95 shadow-sm backdrop-blur-md"
+>
+
+    <div
+        class="mx-auto flex min-h-[82px] max-w-7xl items-center justify-between px-5 lg:px-8"
+    >
+
+        <!-- =================================================
+             LOGO
+        ================================================= -->
+
+        <a
+            href="#inicio"
+            class="group flex shrink-0 items-center"
+            aria-label="Ir al inicio"
+        >
+
+            <img
+                src={mano.src}
+                alt="Estamos para cuidarte"
+                class="h-[64px] w-auto object-contain transition duration-300 group-hover:scale-105 md:h-[68px]"
+            />
+
+        </a>
+
+
+        <!-- =================================================
+             NAV DESKTOP
+        ================================================= -->
+
+        <nav
+            class="hidden lg:block"
+            aria-label="Navegación principal"
+        >
+
+            <ul class="flex items-center gap-4 xl:gap-6">
+
+
+                <!-- INICIO -->
+
+                <li>
+
+                    <a
+                        href="#inicio"
+                        class="group flex min-w-[58px] flex-col items-center gap-1 rounded-xl px-2 py-2 text-[13px] font-medium text-[#211A3D] transition duration-200 hover:bg-purple-50 hover:text-pink-500"
+                    >
+
+                        <img
+                            class="size-6 transition duration-200 group-hover:-translate-y-0.5"
+                            src={homeIcon.src}
+                            alt=""
+                        />
+
+                        <span>
+                            Inicio
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- QUE ES -->
+
+                <li>
+
+                    <a
+                        href="/Quees"
+                        class="group flex min-w-[65px] flex-col items-center gap-1 rounded-xl px-2 py-2 text-[13px] font-medium text-[#211A3D] transition duration-200 hover:bg-purple-50 hover:text-pink-500"
+                    >
+
+                        <span
+                            class="flex h-6 items-center text-lg font-black text-pink-500 transition group-hover:-translate-y-0.5"
+                        >
+                            ?
+                        </span>
+
+                        <span>
+                            ¿Qué es?
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- DERECHOS -->
+
+                <li>
+
+                    <a
+                        href="/Derechos"
+                        class="group flex min-w-[75px] flex-col items-center gap-1 rounded-xl px-2 py-2 text-[13px] font-medium text-[#211A3D] transition duration-200 hover:bg-purple-50 hover:text-pink-500"
+                    >
+
+                        <span
+                            class="flex h-6 items-center text-xl text-purple-600 transition group-hover:-translate-y-0.5"
+                        >
+                            ♡
+                        </span>
+
+                        <span>
+                            Mis derechos
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- SEÑALES -->
+
+                <li>
+
+                    <a
+                        href="/Señales"
+                        class="group flex min-w-[65px] flex-col items-center gap-1 rounded-xl px-2 py-2 text-[13px] font-medium text-[#211A3D] transition duration-200 hover:bg-purple-50 hover:text-pink-500"
+                    >
+
+                        <img
+                            class="size-6 transition duration-200 group-hover:-translate-y-0.5"
+                            src={senalesIcon.src}
+                            alt=""
+                        />
+
+                        <span>
+                            Señales
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- ROLES -->
+
+                <li>
+
+                    <a
+                        href="/Roles"
+                        class="group flex min-w-[55px] flex-col items-center gap-1 rounded-xl px-2 py-2 text-[13px] font-medium text-[#211A3D] transition duration-200 hover:bg-purple-50 hover:text-pink-500"
+                    >
+
+                        <img
+                            class="size-6 transition duration-200 group-hover:-translate-y-0.5"
+                            src={prevencionIcon.src}
+                            alt=""
+                        />
+
+                        <span>
+                            Roles
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- VIDEOS -->
+
+                <li>
+
+                    <a
+                        href="/Videos"
+                        class="group flex min-w-[60px] flex-col items-center gap-1 rounded-xl px-2 py-2 text-[13px] font-medium text-[#211A3D] transition duration-200 hover:bg-purple-50 hover:text-pink-500"
+                    >
+
+                        <img
+                            class="size-6 transition duration-200 group-hover:-translate-y-0.5"
+                            src={videoIcon.src}
+                            alt=""
+                        />
+
+                        <span>
+                            Videos
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- JUEGOS -->
+
+                <li>
+
+                    <a
+                        href="/Juegos"
+                        class="group flex min-w-[60px] flex-col items-center gap-1 rounded-xl px-2 py-2 text-[13px] font-medium text-[#211A3D] transition duration-200 hover:bg-purple-50 hover:text-pink-500"
+                    >
+   <div
+                        class="size-6 transition duration-200 group-hover:-translate-y-0.5"
+                    >
+                        🎮
+                    </div>
+
+                        <span>
+                            Juegos
+                        </span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- PEDIR AYUDA -->
+
+                <li>
+
+                    <a
+                        href="#ayuda"
+                        class="ml-1 inline-flex items-center rounded-full bg-pink-500 px-5 py-3 text-sm font-black text-white shadow-md shadow-pink-200 transition duration-200 hover:-translate-y-0.5 hover:bg-pink-600 hover:shadow-lg"
+                    >
+                        💗 Pedir ayuda
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- =================================================
+             BOTÓN MOBILE
+        ================================================= -->
+
+        <button
+            id="mobileMenuButton"
+            type="button"
+            class="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-50 text-xl font-bold text-purple-700 transition duration-200 hover:bg-purple-100 active:scale-95 lg:hidden"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+        >
+            ☰
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         MENÚ MOBILE
+    ================================================= -->
+
+    <nav
+        id="mobileMenu"
+        class="hidden border-t border-purple-100 bg-white px-5 py-5 shadow-lg lg:hidden"
+        aria-label="Navegación móvil"
+    >
+
+        <div class="mx-auto flex max-w-7xl flex-col gap-2">
+
+
+            <!-- INICIO -->
+
+            <a
+                href="#inicio"
+                class="flex items-center gap-3 rounded-2xl px-4 py-3 font-bold text-[#211A3D] transition hover:bg-purple-50 hover:text-pink-500"
+            >
+
+                <img
+                    src={homeIcon.src}
+                    alt=""
+                    class="h-6 w-6"
+                />
+
+                <span>
+                    Inicio
+                </span>
+
+            </a>
+
+
+            <!-- QUE ES -->
+
+            <a
+                href="/Quees"
+                class="flex items-center gap-3 rounded-2xl px-4 py-3 font-bold text-[#211A3D] transition hover:bg-purple-50 hover:text-pink-500"
+            >
+
+                <span
+                    class="flex h-6 w-6 items-center justify-center text-lg font-black text-pink-500"
+                >
+                    ?
+                </span>
+
+                <span>
+                    ¿Qué es?
+                </span>
+
+            </a>
+
+
+            <!-- DERECHOS -->
+
+            <a
+                href="/Derechos"
+                class="flex items-center gap-3 rounded-2xl px-4 py-3 font-bold text-[#211A3D] transition hover:bg-purple-50 hover:text-pink-500"
+            >
+
+                <span
+                    class="flex h-6 w-6 items-center justify-center text-xl text-purple-600"
+                >
+                    ♡
+                </span>
+
+                <span>
+                    Mis derechos
+                </span>
+
+            </a>
+
+
+            <!-- SEÑALES -->
+
+            <a
+                href="/Señales"
+                class="flex items-center gap-3 rounded-2xl px-4 py-3 font-bold text-[#211A3D] transition hover:bg-purple-50 hover:text-pink-500"
+            >
+
+                <img
+                    src={senalesIcon.src}
+                    alt=""
+                    class="h-6 w-6"
+                />
+
+                <span>
+                    Señales
+                </span>
+
+            </a>
+
+
+            <!-- ROLES -->
+
+            <a
+                href="/Roles"
+                class="flex items-center gap-3 rounded-2xl px-4 py-3 font-bold text-[#211A3D] transition hover:bg-purple-50 hover:text-pink-500"
+            >
+
+                <img
+                    src={prevencionIcon.src}
+                    alt=""
+                    class="h-6 w-6"
+                />
+
+                <span>
+                    Roles
+                </span>
+
+            </a>
+
+
+            <!-- VIDEOS -->
+
+            <a
+                href="/Videos"
+                class="flex items-center gap-3 rounded-2xl px-4 py-3 font-bold text-[#211A3D] transition hover:bg-purple-50 hover:text-pink-500"
+            >
+
+                <img
+                    src={videoIcon.src}
+                    alt=""
+                    class="h-6 w-6"
+                />
+
+                <span>
+                    Videos
+                </span>
+
+            </a>
+
+
+            <!-- JUEGOS -->
+
+            <a
+                href="/Juegos"
+                class="flex items-center gap-3 rounded-2xl px-4 py-3 font-bold text-[#211A3D] transition hover:bg-purple-50 hover:text-pink-500"
+            >
+
+                   <div
+                        class="h-6 w-6"
+                    >
+                        🎮
+                    </div>
+
+                <span>
+                    Juegos
+                </span>
+
+            </a>
+
+
+            <!-- SEPARADOR -->
+
+            <div class="my-2 border-t border-purple-100"></div>
+
+
+            <!-- AYUDA -->
+
+            <a
+                href="#ayuda"
+                class="mt-1 rounded-full bg-pink-500 px-5 py-3.5 text-center font-black text-white shadow-md shadow-pink-200 transition hover:bg-pink-600"
+            >
+                💗 Pedir ayuda
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     CONTENIDO PRINCIPAL
+===================================================== -->
+
+<main id="inicio">
+
+
+    <!-- =================================================
+         HERO
+    ================================================= -->
+
+    <section class="relative overflow-hidden bg-white">
+
+
+       <!-- =================================================
+     DECORACIÓN DEL FONDO
+===================================================== -->
+
+<!-- Azul clarito -->
+<div
+    class="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-[#D9F0FF] opacity-80 blur-3xl"
+></div>
+
+<!-- Rosado -->
+<div
+    class="pointer-events-none absolute -right-40 top-0 h-[420px] w-[420px] rounded-full bg-[#FFDDF0] opacity-75 blur-3xl"
+></div>
+
+<!-- Morado -->
+<div
+    class="pointer-events-none absolute left-1/3 top-1/2 h-80 w-80 rounded-full bg-[#E9D5FF] opacity-60 blur-3xl"
+></div>
+
+<!-- Azul más intenso, muy suave -->
+<div
+    class="pointer-events-none absolute right-1/4 bottom-0 h-72 w-72 rounded-full bg-[#C7E5FF] opacity-50 blur-3xl"
+></div>
+
+
+
+        <div
+            class="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 md:grid-cols-[0.9fr_1.1fr] md:py-20 lg:gap-20 lg:px-8 lg:py-24"
+        >
+
+
+            <!-- =================================================
+                 TEXTO HERO
+            ================================================= -->
+
+            <div class="max-w-xl">
+
+
+                <div
+                    class="mb-6 inline-flex items-center gap-2 rounded-full bg-yellow-100 px-5 py-2.5 text-sm font-bold text-[#55445C]"
+                >
+
+                    <span>
+                        ✦
+                    </span>
+
+                    <span>
+                        Tu seguridad, nuestros superpoderes
+                    </span>
+
+                </div>
+
+
+                <h1
+                    class="text-5xl font-black leading-[0.98] tracking-tight text-[#211A3D] sm:text-6xl lg:text-7xl"
+                >
+
+                    ¡TU CUERPO
+
+                    <span class="block text-pink-500">
+                        ES TUYO!
+                    </span>
+
+                </h1>
+
+
+                <p
+                    class="mt-6 text-2xl font-bold leading-tight text-purple-700 md:text-3xl"
+                >
+                    Y mereces respeto siempre.
+                </p>
+
+
+                <p
+                    class="mt-5 max-w-lg text-base leading-7 text-gray-600 md:text-lg"
+                >
+                    El abuso sexual en menores de edad es un delito.
+                    Hablar y pedir ayuda puede protegerte a ti y a otros.
+                </p>
+
+
+                <!-- BOTONES -->
+
+                <div class="mt-8 flex flex-wrap gap-3">
+
+                    <a
+                        href="/Quees"
+                        class="rounded-full bg-purple-700 px-7 py-3.5 font-bold text-white shadow-lg shadow-purple-200 transition hover:-translate-y-1 hover:bg-purple-800"
+                    >
+                        Conoce más →
+                    </a>
+
+
+                    <a
+                        href="/Videos"
+                        class="rounded-full bg-yellow-300 px-7 py-3.5 font-bold text-[#45365B] shadow-sm transition hover:-translate-y-1 hover:bg-yellow-400"
+                    >
+                        ▶ Ver videos
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ILUSTRACIÓN HERO
+            ================================================= -->
+
+            <div
+                class="relative flex min-h-[390px] items-center justify-center"
+            >
+
+                <div
+                    class="absolute h-[320px] w-[320px] rounded-[45%_55%_50%_50%] bg-pink-100 md:h-[430px] md:w-[430px]"
+                ></div>
+
+
+                <span
+                    class="absolute left-4 top-8 text-5xl text-purple-300"
+                >
+                    ☆
+                </span>
+
+
+                <span
+                    class="absolute right-8 top-4 text-4xl text-yellow-400"
+                >
+                    ✦
+                </span>
+
+
+                <span
+                    class="absolute bottom-8 right-4 text-5xl text-pink-300"
+                >
+                    ♡
+                </span>
+
+
+                <div
+                    class="relative z-10 flex flex-col items-center"
+                >
+
+                    <div
+                        class="mb-[-8px] flex items-end text-[90px] leading-none md:text-[120px]"
+                    >
+                        👧🏻 🧒🏻
+                    </div>
+
+
+                    <div
+                        class="rounded-3xl border-4 border-white bg-white px-7 py-5 text-center shadow-2xl md:px-12 md:py-6"
+                    >
+
+                        <p
+                            class="text-2xl font-black text-purple-700 md:text-3xl"
+                        >
+                            No es tu culpa,
+                        </p>
+
+                        <p
+                            class="text-2xl font-black text-pink-500 md:text-3xl"
+                        >
+                            ¡nunca lo fue!
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         AYUDA DESTACADA
+    ================================================= -->
+
+    <section class="px-6 pb-14 lg:px-8">
+
+        <div
+            class="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[1fr_380px]"
+        >
+
+
+            <div
+                class="hidden items-center rounded-[2rem] bg-[#FAF9FF] p-8 md:flex"
+            >
+
+                <div>
+
+                    <span
+                        class="text-sm font-black uppercase tracking-wide text-pink-500"
+                    >
+                        Aprende y descubre
+                    </span>
+
+                    <h2
+                        class="mt-2 text-2xl font-black text-purple-700"
+                    >
+                        Información que puede ayudarte
+                    </h2>
+
+                    <p
+                        class="mt-2 max-w-xl leading-7 text-gray-600"
+                    >
+                        Conoce tus derechos, identifica señales de alerta
+                        y aprende cuándo y cómo pedir ayuda.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="rounded-[2rem] bg-[#DDF7F1] p-7 shadow-sm"
+            >
+
+                <div class="flex items-start gap-4">
+
+                    <div
+                        class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-2xl shadow-sm"
+                    >
+                        ♡
+                    </div>
+
+
+                    <div>
+
+                        <h2
+                            class="text-xl font-black text-purple-700"
+                        >
+                            ¿Necesitas ayuda?
+                        </h2>
+
+                        <p
+                            class="mt-1 font-bold text-[#211A3D]"
+                        >
+                            No estás solo/a.
+                        </p>
+
+                        <p
+                            class="mt-2 text-sm leading-6 text-gray-600"
+                        >
+                            Hay personas que quieren escucharte y ayudarte.
+                        </p>
+
+                        <a
+                            href="#ayuda"
+                            class="mt-4 inline-flex rounded-full bg-pink-500 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-pink-600"
+                        >
+                            Pedir ayuda ahora
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         EXPLORA
+    ================================================= -->
+
+    <section
+        class="bg-[#FAF9FF] px-6 py-14 lg:px-8"
+    >
+
+        <div class="mx-auto max-w-7xl">
+
+
+            <div class="mb-7">
+
+                <span
+                    class="text-xs font-black uppercase tracking-wider text-pink-500"
+                >
+                    Explora
+                </span>
+
+                <h2
+                    class="mt-1 text-3xl font-black text-purple-700 md:text-4xl"
+                >
+                    Aprende y descubre →
+                </h2>
+
+            </div>
+
+
+            <div
+                class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6"
+            >
+
+
+                <!-- QUE ES -->
+
+                <a
+                    href="/Quees"
+                    class="group rounded-3xl bg-purple-50 p-5 text-center transition hover:-translate-y-1 hover:shadow-lg"
+                >
+
+                    <div
+                        class="mb-3 text-3xl transition group-hover:scale-110"
+                    >
+                        ❓
+                    </div>
+
+                    <p class="text-sm font-bold">
+                        ¿Qué es?
+                    </p>
+
+                </a>
+
+
+                <!-- CUERPO -->
+
+                <a
+                    href="#conoce"
+                    class="group rounded-3xl bg-[#DDF7F1] p-5 text-center transition hover:-translate-y-1 hover:shadow-lg"
+                >
+
+                    <div
+                        class="mb-3 text-3xl transition group-hover:scale-110"
+                    >
+                        🧍
+                    </div>
+
+                    <p class="text-sm font-bold">
+                        Conoce tu cuerpo
+                    </p>
+
+                </a>
+
+
+                <!-- SEÑALES -->
+
+                <a
+                    href="#alertas"
+                    class="group rounded-3xl bg-red-50 p-5 text-center transition hover:-translate-y-1 hover:shadow-lg"
+                >
+
+                    <div
+                        class="mb-3 text-3xl transition group-hover:scale-110"
+                    >
+                        🚨
+                    </div>
+
+                    <p class="text-sm font-bold">
+                        Señales de alerta
+                    </p>
+
+                </a>
+
+
+                <!-- QUE HACER -->
+
+                <a
+                    href="#prevencion"
+                    class="group rounded-3xl bg-blue-50 p-5 text-center transition hover:-translate-y-1 hover:shadow-lg"
+                >
+
+                    <div
+                        class="mb-3 text-3xl transition group-hover:scale-110"
+                    >
+                        🛡️
+                    </div>
+
+                    <p class="text-sm font-bold">
+                        ¿Qué hacer?
+                    </p>
+
+                </a>
+
+
+                <!-- AYUDA -->
+
+                <a
+                    href="#ayuda"
+                    class="group rounded-3xl bg-yellow-50 p-5 text-center transition hover:-translate-y-1 hover:shadow-lg"
+                >
+
+                    <div
+                        class="mb-3 text-3xl transition group-hover:scale-110"
+                    >
+                        💬
+                    </div>
+
+                    <p class="text-sm font-bold">
+                        Pedir ayuda
+                    </p>
+
+                </a>
+
+
+                <!-- VIDEOS -->
+
+                <a
+                    href="/Videos"
+                    class="group rounded-3xl bg-pink-50 p-5 text-center transition hover:-translate-y-1 hover:shadow-lg"
+                >
+
+                    <div
+                        class="mb-3 text-3xl transition group-hover:scale-110"
+                    >
+                        ▶
+                    </div>
+
+                    <p class="text-sm font-bold">
+                        Videos
+                    </p>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+   
+
+
+    <!-- =================================================
+         PREVENCIÓN
+    ================================================= -->
+
+    <section
+        id="prevencion"
+        class="px-6 pb-16 lg:px-8"
+    >
+
+        <div
+            class="mx-auto max-w-7xl rounded-[2rem] bg-yellow-50 p-7 md:p-10"
+        >
+
+
+            <div class="mb-8">
+
+                <span
+                    class="text-xs font-black uppercase tracking-wide text-pink-500"
+                >
+                    Si necesitas ayuda
+                </span>
+
+                <h2
+                    class="mt-2 text-3xl font-black text-purple-700 md:text-4xl"
+                >
+                    Si tú o alguien que conoces necesita ayuda:
+                </h2>
+
+            </div>
+
+
+            <div class="grid gap-5 md:grid-cols-3">
+
+
+                <!-- PERSONA DE CONFIANZA -->
+
+                <article
+                    class="rounded-3xl bg-white p-6 shadow-sm"
+                >
+
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#DDF7F1] text-xl"
+                    >
+                        🛡️
+                    </div>
+
+                    <h3
+                        class="mt-5 text-xl font-black text-purple-700"
+                    >
+                        Busca un adulto de confianza
+                    </h3>
+
+                    <p
+                        class="mt-2 text-sm leading-6 text-gray-600"
+                    >
+                        Cuéntale lo que ocurre a una persona adulta
+                        que pueda escucharte y ayudarte.
+                    </p>
+
+                </article>
+
+
+                <!-- HABLAR -->
+
+                <article
+                    class="rounded-3xl bg-white p-6 shadow-sm"
+                >
+
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-2xl bg-pink-50 text-xl"
+                    >
+                        💬
+                    </div>
+
+                    <h3
+                        class="mt-5 text-xl font-black text-purple-700"
+                    >
+                        Habla sobre lo que pasó
+                    </h3>
+
+                    <p
+                        class="mt-2 text-sm leading-6 text-gray-600"
+                    >
+                        No tienes que guardar algo que te haga sentir
+                        incómodo, triste o asustado.
+                    </p>
+
+                </article>
+
+
+                <!-- DENUNCIA -->
+
+                <article
+                    class="rounded-3xl bg-white p-6 shadow-sm"
+                >
+
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-xl"
+                    >
+                        🚨
+                    </div>
+
+                    <h3
+                        class="mt-5 text-xl font-black text-purple-700"
+                    >
+                        Reporta la situación
+                    </h3>
+
+                    <p
+                        class="mt-2 text-sm leading-6 text-gray-600"
+                    >
+                        Puedes hacer un reporte virtual mediante
+                        Te Protejo.
+                    </p>
+
+                    <a
+                        href="https://teprotejocolombia.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-5 inline-flex rounded-full bg-purple-700 px-5 py-2.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-purple-800"
+                    >
+                        Reportar ahora →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CONOCE TU CUERPO
+    ================================================= -->
+
+    <section
+        id="conoce"
+        class="bg-[#FAF9FF] px-6 py-16 lg:px-8"
+    >
+
+        <div class="mx-auto max-w-7xl">
+
+            <div
+                class="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr]"
+            >
+
+
+                <div>
+
+                    <span
+                        class="text-xs font-black uppercase tracking-wide text-pink-500"
+                    >
+                        Conoce tu cuerpo
+                    </span>
+
+                    <h2
+                        class="mt-3 text-4xl font-black leading-tight text-purple-700 md:text-5xl"
+                    >
+                        Tu cuerpo merece respeto.
+                    </h2>
+
+                    <p
+                        class="mt-5 max-w-lg text-base leading-7 text-gray-600"
+                    >
+                        Aprender sobre tus límites, emociones y derechos
+                        puede ayudarte a reconocer cuándo algo no está bien.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="grid gap-5 sm:grid-cols-3"
+                >
+
+
+                    <!-- MI CUERPO -->
+
+                    <article
+                        class="rounded-3xl bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                    >
+
+                        <div class="text-4xl">
+                            🧍
+                        </div>
+
+                        <h3
+                            class="mt-5 font-black text-purple-700"
+                        >
+                            Mi cuerpo
+                        </h3>
+
+                        <p
+                            class="mt-2 text-sm leading-6 text-gray-600"
+                        >
+                            Tu cuerpo es tuyo.
+                        </p>
+
+                    </article>
+
+
+                    <!-- MIS LÍMITES -->
+
+                    <article
+                        class="rounded-3xl bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                    >
+
+                        <div class="text-4xl">
+                            ✋
+                        </div>
+
+                        <h3
+                            class="mt-5 font-black text-purple-700"
+                        >
+                            Mis límites
+                        </h3>
+
+                        <p
+                            class="mt-2 text-sm leading-6 text-gray-600"
+                        >
+                            Puedes decir no.
+                        </p>
+
+                    </article>
+
+
+                    <!-- MI VOZ -->
+
+                    <article
+                        class="rounded-3xl bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                    >
+
+                        <div class="text-4xl">
+                            🗣️
+                        </div>
+
+                        <h3
+                            class="mt-5 font-black text-purple-700"
+                        >
+                            Mi voz
+                        </h3>
+
+                        <p
+                            class="mt-2 text-sm leading-6 text-gray-600"
+                        >
+                            Puedes pedir ayuda.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         MENSAJES
+    ================================================= -->
+
+    <section
+        class="bg-[#FAF9FF] px-6 py-16 lg:px-8"
+    >
+
+        <div class="mx-auto max-w-7xl">
+
+            <span
+                class="text-xs font-black uppercase tracking-wide text-pink-500"
+            >
+                💬 Palabras que ayudan
+            </span>
+
+            <h2
+                class="mt-2 text-3xl font-black text-purple-700 md:text-4xl"
+            >
+                Mensajes de amigos
+            </h2>
+
+
+            <div
+                class="mt-8 grid gap-5 md:grid-cols-3"
+            >
+
+
+                <!-- MENSAJE 1 -->
+
+                <article
+                    class="rounded-3xl bg-blue-50 p-7"
+                >
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="text-4xl">
+                            👦🏻
+                        </div>
+
+                        <span
+                            class="font-black text-purple-700"
+                        >
+                            Un amigo dice:
+                        </span>
+
+                    </div>
+
+                    <p
+                        class="mt-6 text-lg font-bold leading-7"
+                    >
+                        “Si algo te hace sentir mal, habla. Siempre habrá alguien que te escuche.”
+                    </p>
+
+                </article>
+
+
+                <!-- MENSAJE 2 -->
+
+                <article
+                    class="rounded-3xl bg-pink-50 p-7"
+                >
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="text-4xl">
+                            👧🏻
+                        </div>
+
+                        <span
+                            class="font-black text-purple-700"
+                        >
+                            Una amiga dice:
+                        </span>
+
+                    </div>
+
+                    <p
+                        class="mt-6 text-lg font-bold leading-7"
+                    >
+                        “No guardes secretos que te hagan daño.”
+                    </p>
+
+                </article>
+
+
+                <!-- MENSAJE 3 -->
+
+                <article
+                    class="rounded-3xl bg-yellow-50 p-7"
+                >
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="text-4xl">
+                            🧒🏽
+                        </div>
+
+                        <span
+                            class="font-black text-purple-700"
+                        >
+                            Un amigo dice:
+                        </span>
+
+                    </div>
+
+                    <p
+                        class="mt-6 text-lg font-bold leading-7"
+                    >
+                        “Pedir ayuda es un primer paso para estar bien.”
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         AYUDA
+    ================================================= -->
+
+    <section
+        id="ayuda"
+        class="px-6 py-16 lg:px-8"
+    >
+
+        <div class="mx-auto max-w-7xl">
+
+            <div
+                class="overflow-hidden rounded-[2rem] bg-pink-500"
+            >
+
+                <div
+                    class="grid md:grid-cols-[1.2fr_.8fr]"
+                >
+
+
+                    <!-- TEXTO -->
+
+                    <div
+                        class="p-8 text-white md:p-12"
+                    >
+
+                        <span
+                            class="inline-flex rounded-full bg-white/20 px-4 py-2 text-xs font-black"
+                        >
+                            NO ESTÁS SOLO/A
+                        </span>
+
+
+                        <h2
+                            class="mt-6 text-4xl font-black md:text-5xl"
+                        >
+                            Pedir ayuda está bien.
+                        </h2>
+
+
+                        <p
+                            class="mt-5 max-w-xl leading-7 text-white/90"
+                        >
+                            Si algo te preocupa o te hace sentir incómodo/a,
+                            puedes hablar con alguien de confianza.
+                        </p>
+
+
+                        <div
+                            class="mt-7 flex flex-wrap gap-3"
+                        >
+
+                            <a
+                                href="https://teprotejocolombia.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="rounded-full bg-white px-6 py-3 font-black text-pink-500 transition hover:-translate-y-1"
+                            >
+                                Reportar una situación →
+                            </a>
+
+
+                            <a
+                                href="#recursos"
+                                class="rounded-full bg-purple-700 px-6 py-3 font-black text-white transition hover:-translate-y-1"
+                            >
+                                Ver recursos
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ILUSTRACIÓN -->
+
+                    <div
+                        class="flex min-h-[280px] items-center justify-center bg-pink-400"
+                    >
+
+                        <div class="text-center">
+
+                            <div class="text-8xl">
+                                🧒🏻
+                            </div>
+
+                            <div
+                                class="mt-4 rounded-2xl bg-white px-6 py-3 font-bold text-purple-700 shadow-xl"
+                            >
+                                Tu voz importa 💗
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         RECURSOS / HERRAMIENTAS
+    ================================================= -->
+
+    <section
+        id="recursos"
+        class="bg-[#FAF9FF] px-6 py-16 lg:px-8"
+    >
+
+        <div class="mx-auto max-w-7xl">
+
+
+            <span
+                class="text-xs font-black uppercase tracking-wide text-pink-500"
+            >
+                Recursos
+            </span>
+
+
+            <h2
+                class="mt-2 text-3xl font-black text-purple-700 md:text-4xl"
+            >
+                Herramientas para aprender
+            </h2>
+
+
+            <p
+                class="mt-3 max-w-2xl text-gray-600"
+            >
+                Descubre actividades y contenidos que te ayudan a conocerte,
+                expresar lo que sientes y aprender de una forma divertida.
+            </p>
+
+
+            <div
+                class="mt-8 grid gap-6 md:grid-cols-3"
+            >
+
+
+                <!-- =================================================
+                     EMOCIONES
+                ================================================= -->
+
+                <article
+                    class="group rounded-3xl bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                >
+
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-2xl bg-pink-50 text-2xl transition group-hover:scale-110"
+                    >
+                        🧠
+                    </div>
+
+
+                    <h3
+                        class="mt-5 text-xl font-black text-purple-700"
+                    >
+                        Conoce tus emociones
+                    </h3>
+
+
+                    <p
+                        class="mt-2 text-sm leading-6 text-gray-600"
+                    >
+                        Aprende a reconocer lo que sientes y descubre
+                        que todas tus emociones son importantes.
+                    </p>
+
+
+                    <a
+                        href="#conoce"
+                        class="mt-5 inline-block font-bold text-pink-500 transition hover:text-pink-600"
+                    >
+                        Aprender más →
+                    </a>
+
+                </article>
+
+
+                <!-- =================================================
+                     JUEGOS
+                ================================================= -->
+
+                <article
+                    class="group rounded-3xl bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                >
+
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-2xl bg-yellow-50 text-2xl transition group-hover:scale-110"
+                    >
+                        🎮
+                    </div>
+
+
+                    <h3
+                        class="mt-5 text-xl font-black text-purple-700"
+                    >
+                        Juegos para aprender
+                    </h3>
+
+
+                    <p
+                        class="mt-2 text-sm leading-6 text-gray-600"
+                    >
+                        Aprende sobre tus derechos, límites y seguridad
+                        mientras juegas y te diviertes.
+                    </p>
+
+
+                    <a
+                        href="/Juegos"
+                        class="mt-5 inline-block font-bold text-pink-500 transition hover:text-pink-600"
+                    >
+                        Ir a los juegos →
+                    </a>
+
+                </article>
+
+
+                <!-- =================================================
+                     CONSEJOS
+                ================================================= -->
+
+                <article
+                    class="group rounded-3xl bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                >
+
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#DDF7F1] text-2xl transition group-hover:scale-110"
+                    >
+                        💜
+                    </div>
+
+
+                    <h3
+                        class="mt-5 text-xl font-black text-purple-700"
+                    >
+                        Consejos para cuidarte
+                    </h3>
+
+
+                    <p
+                        class="mt-2 text-sm leading-6 text-gray-600"
+                    >
+                        Encuentra ideas sencillas para cuidar tus límites,
+                        reconocer situaciones incómodas y pedir ayuda.
+                    </p>
+
+
+                    <a
+                        href="#prevencion"
+                        class="mt-5 inline-block font-bold text-pink-500 transition hover:text-pink-600"
+                    >
+                        Ver consejos →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <!-- =================================================
+         FRASE FINAL
+    ================================================= -->
+
+    <section
+        class="bg-purple-700 px-6 py-12 text-white lg:px-8"
+    >
+
+        <div
+            class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 md:flex-row"
+        >
+
+
+            <div>
+
+                <h2
+                    class="max-w-2xl text-center text-3xl font-black leading-tight md:text-left md:text-4xl"
+                >
+                    Juntos podemos construir un mundo seguro y feliz para todos los niños y niñas.
+                </h2>
+
+
+                <div
+                    class="mt-5 flex justify-center gap-3 text-3xl md:justify-start"
+                >
+                    ⭐ 💜 💗
+                </div>
+
+            </div>
+
+
+            <div
+                class="whitespace-nowrap text-6xl md:text-7xl"
+            >
+                👦🏻 👧🏻 🧒🏽
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         FOOTER INFERIOR
+    ================================================= -->
+
+    <div
+        class="bg-[#25185B] px-6 py-7 text-sm text-white lg:px-8"
+    >
+
+        <div
+            class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row"
+        >
+
+
+            <!-- REDES -->
+
+            <div class="flex gap-4 text-xl">
+
+                <a
+                    href="#"
+                    aria-label="YouTube"
+                    class="transition hover:text-pink-400"
+                >
+                    ▶
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="Instagram"
+                    class="transition hover:text-pink-400"
+                >
+                    ◎
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="TikTok"
+                    class="transition hover:text-pink-400"
+                >
+                    ♪
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="Facebook"
+                    class="transition hover:text-pink-400"
+                >
+                    f
+                </a>
+
+            </div>
+            
+
+
+            <!-- ENLACES -->
+
+            <div
+                class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-center"
+            >
+
+                <a
+                    href="#"
+                    class="transition hover:text-pink-400"
+                >
+                    Aviso de privacidad
+                </a>
+
+
+                <a
+                    href="#"
+                    class="transition hover:text-pink-400"
+                >
+                    Términos de uso
+                </a>
+
+
+                <a
+                    href="#"
+                    class="transition hover:text-pink-400"
+                >
+                    Política de protección de datos
+                </a>
+
+
+                <a
+                    href="#ayuda"
+                    class="transition hover:text-pink-400"
+                >
+                    Contacto
+                </a>
+
+            </div>
+
+
+            <!-- FIRMA -->
+
+            <div
+                class="whitespace-nowrap text-white/90"
+            >
+                💗 Hecho con amor para ti
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     BOTÓN VOLVER ARRIBA
+===================================================== -->
+
+<a
+    href="#inicio"
+    aria-label="Volver arriba"
+    class="fixed bottom-5 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-purple-700 text-xl font-bold text-white shadow-xl transition hover:-translate-y-1 hover:bg-pink-500"
+>
+    ↑
+</a>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    /* =================================================
+       MENÚ MOBILE
+    ================================================= */
+
+    const mobileMenuButton =
+        document.getElementById("mobileMenuButton");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+
+    if (mobileMenuButton && mobileMenu) {
+
+
+        mobileMenuButton.addEventListener("click", () => {
+
+
+            const estaOculto =
+                mobileMenu.classList.contains("hidden");
+
+
+            mobileMenu.classList.toggle("hidden");
+
+
+            mobileMenuButton.setAttribute(
+                "aria-expanded",
+                String(estaOculto)
+            );
+
+
+            mobileMenuButton.setAttribute(
+                "aria-label",
+                estaOculto
+                    ? "Cerrar menú"
+                    : "Abrir menú"
+            );
+
+
+            mobileMenuButton.textContent =
+                estaOculto
+                    ? "✕"
+                    : "☰";
+
+        });
+
+
+        /* =================================================
+           CERRAR MENÚ AL SELECCIONAR UNA OPCIÓN
+        ================================================= */
+
+        mobileMenu
+            .querySelectorAll("a")
+            .forEach((link) => {
+
+
+                link.addEventListener("click", () => {
+
+
+                    mobileMenu.classList.add("hidden");
+
+
+                    mobileMenuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    mobileMenuButton.setAttribute(
+                        "aria-label",
+                        "Abrir menú"
+                    );
+
+
+                    mobileMenuButton.textContent =
+                        "☰";
+
+                });
+
+            });
+
+    }
+
+</script>
+
+
+</body>
+</html>

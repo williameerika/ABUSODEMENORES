@@ -1,0 +1,430 @@
+---
+import miCuerpo from "../assets/video/Mi cuerpo es mío.mp4";
+import aprendoNo from "../assets/video/Aprendo a decir NO.mp4";
+import construyeEscudo from "../assets/video/Construye tu escudo.mp4";
+import personasConfianza from "../assets/video/Personas de confianza.mp4";
+import secretosBuenosMalos from "../assets/video/Secretos buenos y malos.mp4";
+import '../styles/global.css'
+
+
+const videos = [
+    {
+        titulo: "Mi cuerpo es mío",
+        descripcion: "Una historia sobre el cuerpo, los límites y el respeto.",
+        categoria: "Video animado",
+        duracion: "3:20",
+        archivo: miCuerpo,
+        color: "from-purple-600 to-purple-400",
+        icono: "👧🏻 🛡️",
+    },
+    {
+        titulo: "Aprendo a decir NO",
+        descripcion: "Aprende a expresar tus límites de manera segura.",
+        categoria: "Historia animada",
+        duracion: "4:15",
+        archivo: aprendoNo,
+        color: "from-pink-500 to-pink-300",
+        icono: "🧒🏻 ✋",
+    },
+    {
+        titulo: "Hablar es importante",
+        descripcion: "Descubre con quién puedes hablar cuando algo te preocupa.",
+        categoria: "Para aprender",
+        duracion: "4:15",
+        archivo: aprendoNo,
+        color: "from-teal-500 to-teal-200",
+        icono: "🧒🏻 💬",
+    },
+    {
+        titulo: "Personas de confianza",
+        descripcion: "Identifica personas que pueden escucharte y ayudarte.",
+        categoria: "Historia",
+        duracion: "3:45",
+        archivo: personasConfianza,
+        color: "from-yellow-300 to-yellow-100",
+        icono: "🧑🏻‍🤝‍🧑🏻 ❤️",
+    },
+    {
+        titulo: "Secretos buenos y malos",
+        descripcion: "Aprende cuándo un secreto puede hacerte sentir mal.",
+        categoria: "Seguridad",
+        duracion: "4:30",
+        archivo: secretosBuenosMalos,
+        color: "from-blue-400 to-blue-100",
+        icono: "🧒🏻 🔒",
+    },
+    {
+        titulo: "Construye tu escudo",
+        descripcion: "Aprende diferentes formas de protegerte.",
+        categoria: "Prevención",
+        duracion: "4:50",
+        archivo: construyeEscudo,
+        color: "from-purple-400 to-purple-100",
+        icono: "🛡️ ⭐",
+    },
+];
+---
+
+<!-- =================================================
+         VIDEOS
+    ================================================= -->
+
+    <section
+        id="videos"
+        class="relative overflow-hidden bg-gradient-to-b from-purple-50 via-[#FAF9FF] to-pink-50 px-6 py-16 lg:px-8"
+    >
+
+        <!-- MANCHAS DECORATIVAS -->
+
+        <div class="pointer-events-none absolute -left-32 -top-10 h-80 w-80 rounded-full bg-purple-200 opacity-50 blur-3xl"></div>
+
+        <div class="pointer-events-none absolute -right-24 top-40 h-72 w-72 rounded-full bg-pink-200 opacity-50 blur-3xl"></div>
+
+        <div class="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-yellow-100 opacity-60 blur-3xl"></div>
+
+
+        <div class="relative mx-auto max-w-7xl">
+
+<!-- VOLVER AL INICIO -->
+
+            <a
+                href="/"
+                class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-purple-700 shadow-md transition hover:-translate-x-1 hover:bg-purple-50 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-purple-200"
+            >
+                <span>←</span>
+                Volver al inicio
+            </a>
+
+
+<!-- ENCABEZADO -->
+
+            <div class="mx-auto mt-8 max-w-2xl text-center">
+
+                <span class="inline-flex items-center gap-2 rounded-full bg-pink-50 px-4 py-1.5 text-xs font-black uppercase tracking-wide text-pink-500">
+                    🎬 Aprende viendo
+                </span>
+
+                <h1 class="mt-4 text-4xl font-black leading-tight text-purple-700 md:text-5xl">
+                    Videos animados
+                </h1>
+
+                <p class="mt-4 leading-7 text-gray-600">
+                    Historias cortas y sencillas para aprender sobre
+                    el respeto, los límites y cómo pedir ayuda.
+                </p>
+
+            </div>
+
+
+<!-- TARJETAS -->
+
+            <div class="mt-9 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+                {
+                    videos.map((video) => (
+                        <article
+                            class="group overflow-hidden rounded-[1.7rem] bg-white shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl"
+                        >
+
+                            <!-- MINIATURA -->
+
+                            <div
+                                class={`relative flex h-52 items-center justify-center overflow-hidden bg-gradient-to-br ${video.color}`}
+                            >
+
+                                <div class="text-7xl transition duration-300 group-hover:scale-110">
+                                    {video.icono}
+                                </div>
+
+
+                                <!-- DURACIÓN -->
+
+                                <span
+                                    class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-bold text-purple-700 shadow-sm"
+                                >
+                                    {video.duracion}
+                                </span>
+
+
+                                <!-- BOTÓN PLAY -->
+
+                                <button
+                                    type="button"
+                                    class="video-open absolute bottom-4 right-4 flex h-14 w-14 items-center justify-center rounded-full bg-pink-500 text-xl text-white shadow-lg transition hover:scale-110 hover:bg-pink-600 focus:outline-none focus:ring-4 focus:ring-pink-300"
+                                    data-video={video.archivo}
+                                    data-title={video.titulo}
+                                    aria-label={`Reproducir ${video.titulo}`}
+                                >
+                                    ▶
+                                </button>
+
+                            </div>
+
+
+                            <!-- INFORMACIÓN -->
+
+                            <div class="p-6">
+
+                                <span class="text-[11px] font-black uppercase tracking-wide text-pink-500">
+                                    {video.categoria}
+                                </span>
+
+                                <h3 class="mt-2 text-xl font-black text-purple-700">
+                                    {video.titulo}
+                                </h3>
+
+                                <p class="mt-2 text-sm leading-6 text-gray-600">
+                                    {video.descripcion}
+                                </p>
+
+
+                                <!-- BOTÓN VER VIDEO -->
+
+                                <button
+                                    type="button"
+                                    class="video-open mt-5 inline-flex items-center gap-2 font-bold text-pink-500 transition hover:text-pink-600 focus:outline-none"
+                                    data-video={video.archivo}
+                                    data-title={video.titulo}
+                                >
+                                    Ver video
+                                    <span>→</span>
+                                </button>
+
+                            </div>
+
+                        </article>
+                    ))
+                }
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         MODAL DE VIDEOS
+    ================================================= -->
+
+    <div
+        id="video-modal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center bg-[#110c22]/90 p-4 backdrop-blur-sm"
+        aria-hidden="true"
+    >
+
+        <!-- CONTENEDOR -->
+
+        <div
+            id="video-modal-content"
+            class="relative w-full max-w-5xl overflow-hidden rounded-[1.5rem] bg-black shadow-2xl"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="video-modal-title"
+        >
+
+            <!-- X -->
+
+            <button
+                id="video-close"
+                type="button"
+                class="absolute right-4 top-4 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-white text-3xl font-bold leading-none text-purple-700 shadow-xl transition hover:scale-110 hover:bg-pink-500 hover:text-white focus:outline-none focus:ring-4 focus:ring-pink-300"
+                aria-label="Cerrar video"
+            >
+                ×
+            </button>
+
+
+            <!-- TÍTULO -->
+
+            <div class="absolute left-4 top-4 z-20 max-w-[calc(100%-85px)] rounded-full bg-black/60 px-4 py-2 text-sm font-bold text-white backdrop-blur-md">
+                <span id="video-modal-title">
+                    Video
+                </span>
+            </div>
+
+
+            <!-- VIDEO -->
+
+            <div class="flex min-h-[300px] max-h-[90vh] items-center justify-center bg-black">
+
+                <video
+                    id="video-player"
+                    class="max-h-[90vh] w-full object-contain"
+                    controls
+                    playsinline
+                    preload="metadata"
+                >
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script>
+
+    /* =================================================
+       MODAL DE VIDEOS
+       (vive aquí porque el modal, el <video> y los
+       botones .video-open están en esta misma página)
+    ================================================= */
+
+    const modal =
+        document.getElementById("video-modal");
+
+    const modalContent =
+        document.getElementById("video-modal-content");
+
+    const closeButton =
+        document.getElementById("video-close");
+
+    const videoPlayer =
+        document.getElementById("video-player") as HTMLVideoElement | null;
+
+    const modalTitle =
+        document.getElementById("video-modal-title");
+
+
+    const openButtons =
+        document.querySelectorAll(".video-open");
+
+
+    function abrirVideo(button: Element) {
+
+        if (
+            !button ||
+            !modal ||
+            !videoPlayer ||
+            !modalTitle
+        ) {
+            return;
+        }
+
+
+        const videoSrc =
+            button.getAttribute("data-video");
+
+        const title =
+            button.getAttribute("data-title") || "Video";
+
+
+        if (!videoSrc) {
+            return;
+        }
+
+
+        videoPlayer.pause();
+
+        videoPlayer.src = videoSrc;
+
+        modalTitle.textContent = title;
+
+
+        modal.classList.remove("hidden");
+
+        modal.classList.add("flex");
+
+        modal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+
+        document.body.classList.add(
+            "overflow-hidden"
+        );
+
+
+        videoPlayer.currentTime = 0;
+
+        videoPlayer.play().catch(() => {});
+
+        (closeButton as HTMLElement | null)?.focus();
+
+    }
+
+
+    function cerrarVideo() {
+
+        if (!modal || !videoPlayer) {
+            return;
+        }
+
+
+        videoPlayer.pause();
+
+        videoPlayer.removeAttribute("src");
+
+        videoPlayer.load();
+
+
+        modal.classList.add("hidden");
+
+        modal.classList.remove("flex");
+
+        modal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+
+        document.body.classList.remove(
+            "overflow-hidden"
+        );
+
+    }
+
+
+    openButtons.forEach((button) => {
+
+        button.addEventListener("click", () => {
+
+            abrirVideo(button);
+
+        });
+
+    });
+
+
+    closeButton?.addEventListener(
+        "click",
+        cerrarVideo
+    );
+
+
+    modal?.addEventListener("click", (event) => {
+
+        if (event.target === modal) {
+
+            cerrarVideo();
+
+        }
+
+    });
+
+
+    modalContent?.addEventListener(
+        "click",
+        (event) => {
+            event.stopPropagation();
+        }
+    );
+
+
+    document.addEventListener("keydown", (event) => {
+
+        if (
+            event.key === "Escape" &&
+            modal?.getAttribute("aria-hidden") === "false"
+        ) {
+
+            cerrarVideo();
+
+        }
+
+    });
+
+</script>

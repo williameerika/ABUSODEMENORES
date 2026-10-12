@@ -1,0 +1,756 @@
+
+---
+import "../styles/global.css";
+---
+
+<section
+  id="juegos"
+  class="relative overflow-hidden bg-gradient-to-b from-purple-50 via-white to-pink-50 px-4 py-16 sm:px-6 lg:px-8"
+>
+  <!-- DECORACIÓN DE FONDO -->
+  <div class="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-purple-200/40 blur-3xl"></div>
+  <div class="pointer-events-none absolute -right-32 top-[45%] h-96 w-96 rounded-full bg-pink-200/40 blur-3xl"></div>
+  <div class="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-yellow-100/50 blur-3xl"></div>
+
+  <div class="relative mx-auto max-w-7xl">
+
+    <!-- VOLVER AL INICIO -->
+    <a
+      href="/"
+      class="mb-10 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-purple-700 shadow-md transition hover:-translate-x-1 hover:bg-purple-50 hover:shadow-lg"
+    >
+      ← Volver al inicio
+    </a>
+
+    <!-- ENCABEZADO -->
+    <div class="mx-auto max-w-3xl text-center">
+      <span
+        class="inline-flex items-center gap-2 rounded-full bg-pink-50 px-4 py-1.5 text-xs font-black uppercase tracking-wide text-pink-500"
+      >
+        🎮 Aprende jugando
+      </span>
+
+      <h1 class="mt-4 text-4xl font-black text-purple-700 md:text-5xl">
+        Juegos educativos
+      </h1>
+
+      <p class="mt-4 text-base leading-7 text-gray-600 md:text-lg">
+        Diviértete mientras aprendes sobre el respeto, los límites,
+        la protección y la importancia de pedir ayuda.
+      </p>
+    </div>
+
+    <!-- =====================================================
+         JUEGO 1 - SOPA DE LETRAS
+    ====================================================== -->
+
+    <div
+      id="sopa"
+      class="mt-12 rounded-[2rem] border border-purple-100 bg-white/90 p-5 shadow-xl backdrop-blur-sm md:p-8"
+    >
+      <div class="text-center">
+        <span class="text-4xl">🔎</span>
+
+        <h2 class="mt-3 text-2xl font-black text-purple-700 md:text-3xl">
+          Sopa de letras
+        </h2>
+
+        <p class="mt-2 text-gray-600">
+          Encuentra las palabras relacionadas con la protección y el cuidado.
+        </p>
+      </div>
+
+      <!-- PALABRAS -->
+      <div
+        id="listaPalabras"
+        class="mx-auto mt-7 flex max-w-3xl flex-wrap justify-center gap-2"
+      >
+      </div>
+
+      <!-- TABLERO -->
+      <div
+        class="mt-8 overflow-x-auto rounded-3xl bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 p-4 shadow-inner md:p-6"
+      >
+        <div
+          id="grid"
+          class="mx-auto grid w-max gap-1.5"
+          style="grid-template-columns: repeat(12, minmax(0, 1fr));"
+        >
+        </div>
+      </div>
+
+      <!-- CONTADOR -->
+      <div class="mt-6 text-center">
+        <p
+          id="contador"
+          class="inline-flex rounded-full bg-purple-100 px-5 py-2 font-black text-purple-700"
+        >
+          Palabras encontradas: 0 / 7
+        </p>
+
+        <p
+          id="ganaste"
+          class="mt-4 hidden text-2xl font-black text-green-600"
+        >
+          🎉 ¡Felicidades! Encontraste todas las palabras 🎉
+        </p>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         JUEGO 2 - TEST
+    ====================================================== -->
+
+    <div
+      id="test"
+      class="mt-10 rounded-[2rem] border border-pink-100 bg-gradient-to-br from-white to-pink-50 p-5 shadow-xl md:p-8"
+    >
+      <div class="text-center">
+        <span class="text-4xl">🧠</span>
+
+        <h2 class="mt-3 text-2xl font-black text-purple-700 md:text-3xl">
+          Test de aprendizaje
+        </h2>
+
+        <p class="mt-2 text-gray-600">
+          Responde las preguntas y comprueba cuánto has aprendido.
+        </p>
+      </div>
+
+      <div
+        class="mx-auto mt-8 max-w-3xl rounded-3xl bg-gradient-to-br from-purple-700 to-purple-900 p-6 text-white shadow-lg md:p-8"
+      >
+        <!-- PROGRESO -->
+        <div class="mb-6">
+          <div class="mb-2 flex justify-between text-sm font-bold text-purple-100">
+            <span>Progreso</span>
+            <span id="progresoTest">1 / 5</span>
+          </div>
+
+          <div class="h-2 overflow-hidden rounded-full bg-white/20">
+            <div
+              id="barraProgreso"
+              class="h-full w-0 rounded-full bg-pink-400 transition-all duration-500"
+            ></div>
+          </div>
+        </div>
+
+        <h3
+          id="pregunta"
+          class="text-center text-xl font-black leading-8 md:text-2xl"
+        ></h3>
+
+        <div id="opciones" class="mt-7 space-y-3"></div>
+
+        <p
+          id="resultado"
+          class="mt-6 min-h-[32px] text-center text-lg font-black"
+        ></p>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         JUEGO 3 - ARRASTRAR
+    ====================================================== -->
+
+    <div
+      id="juego"
+      class="mt-10 rounded-[2rem] border border-yellow-100 bg-gradient-to-br from-white via-yellow-50/40 to-purple-50 p-5 shadow-xl md:p-8"
+    >
+      <div class="text-center">
+        <span class="text-4xl">🎯</span>
+
+        <h2 class="mt-3 text-2xl font-black text-purple-700 md:text-3xl">
+          Juego de acciones
+        </h2>
+
+        <p class="mt-2 text-gray-600">
+          Arrastra cada acción hacia el lugar que consideres correcto.
+        </p>
+      </div>
+
+      <!-- TARJETAS -->
+      <div
+        id="arrastrarJuego"
+        class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+      >
+        <div
+          class="tarjeta cursor-grab rounded-2xl border border-purple-100 bg-white p-5 text-center font-bold text-purple-700 shadow-md transition hover:-translate-y-1 hover:shadow-lg active:cursor-grabbing"
+          draggable="true"
+          id="t1"
+        >
+          🗣️ Contarle a un adulto
+        </div>
+
+        <div
+          class="tarjeta cursor-grab rounded-2xl border border-purple-100 bg-white p-5 text-center font-bold text-purple-700 shadow-md transition hover:-translate-y-1 hover:shadow-lg active:cursor-grabbing"
+          draggable="true"
+          id="t2"
+        >
+          🤐 Guardar silencio
+        </div>
+
+        <div
+          class="tarjeta cursor-grab rounded-2xl border border-purple-100 bg-white p-5 text-center font-bold text-purple-700 shadow-md transition hover:-translate-y-1 hover:shadow-lg active:cursor-grabbing"
+          draggable="true"
+          id="t3"
+        >
+          🆘 Pedir ayuda
+        </div>
+
+        <div
+          class="tarjeta cursor-grab rounded-2xl border border-purple-100 bg-white p-5 text-center font-bold text-purple-700 shadow-md transition hover:-translate-y-1 hover:shadow-lg active:cursor-grabbing"
+          draggable="true"
+          id="t4"
+        >
+          👩‍🏫 Hablar con un profesor
+        </div>
+
+        <div
+          class="tarjeta cursor-grab rounded-2xl border border-purple-100 bg-white p-5 text-center font-bold text-purple-700 shadow-md transition hover:-translate-y-1 hover:shadow-lg active:cursor-grabbing"
+          draggable="true"
+          id="t5"
+        >
+          🙈 Esconder lo que pasa
+        </div>
+
+        <div
+          class="tarjeta cursor-grab rounded-2xl border border-purple-100 bg-white p-5 text-center font-bold text-purple-700 shadow-md transition hover:-translate-y-1 hover:shadow-lg active:cursor-grabbing"
+          draggable="true"
+          id="t6"
+        >
+          🛡️ Buscar protección
+        </div>
+      </div>
+
+      <!-- ZONAS -->
+      <div class="mt-8 grid gap-5 md:grid-cols-2">
+        <div
+          id="correcto"
+          class="drop-zone min-h-[180px] rounded-3xl border-2 border-dashed border-green-300 bg-green-50 p-6 text-center transition"
+        >
+          <div class="text-4xl">✅</div>
+
+          <h3 class="mt-2 text-xl font-black text-green-700">
+            Acciones seguras
+          </h3>
+
+          <p class="mt-2 text-sm text-green-700/70">
+            Suelta aquí las acciones que ayudan a protegerte.
+          </p>
+        </div>
+
+        <div
+          id="incorrecto"
+          class="drop-zone min-h-[180px] rounded-3xl border-2 border-dashed border-red-300 bg-red-50 p-6 text-center transition"
+        >
+          <div class="text-4xl">❌</div>
+
+          <h3 class="mt-2 text-xl font-black text-red-700">
+            Acciones incorrectas
+          </h3>
+
+          <p class="mt-2 text-sm text-red-700/70">
+            Coloca aquí las acciones que no ayudan.
+          </p>
+        </div>
+      </div>
+
+      <p
+        id="mensajeJuego"
+        class="mt-6 min-h-[32px] text-center text-lg font-black"
+      ></p>
+    </div>
+
+  </div>
+  <!-- JUEGO -->
+<div class="mt-28 mb-10 text-center">
+
+    <h2 class="mb-4 text-3xl font-black text-purple-700">
+        🎮 ¿Quieres probar el juego?
+    </h2>
+
+    <p class="mb-6 text-gray-600">
+        Pon a prueba tus conocimientos y diviértete.
+    </p>
+
+    <a
+        href="https://www.dola.com/building/render/a0b70c1846360?a=&share_token=E7535361-72A2-478D-A276-001B5C73D195"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block rounded-full bg-purple-600 px-8 py-4 text-lg font-bold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-purple-700 hover:shadow-xl"
+    >
+        🎮 Ir al juego
+    </a>
+
+</div>
+</section>
+
+<script>
+  /* =====================================================
+     TEST
+  ====================================================== */
+
+  const preguntas = [
+    {
+      pregunta: "¿Qué debes hacer si algo te incomoda?",
+      opciones: ["Contarle a un adulto", "Guardar silencio"],
+      correcta: 0,
+    },
+    {
+      pregunta: "¿Tu cuerpo merece respeto?",
+      opciones: ["Sí", "No"],
+      correcta: 0,
+    },
+    {
+      pregunta: "¿Pedir ayuda está bien?",
+      opciones: ["Sí", "No"],
+      correcta: 0,
+    },
+    {
+      pregunta: "¿Debes confiar en adultos seguros?",
+      opciones: ["Sí", "No"],
+      correcta: 0,
+    },
+    {
+      pregunta: "¿Está bien guardar secretos que te hacen sentir mal?",
+      opciones: ["No", "Sí"],
+      correcta: 0,
+    },
+  ];
+
+  let actual = 0;
+  let respondiendo = false;
+
+  const preguntaEl = document.getElementById("pregunta");
+  const opcionesEl = document.getElementById("opciones");
+  const resultadoEl = document.getElementById("resultado");
+  const progresoEl = document.getElementById("progresoTest");
+  const barraEl = document.getElementById("barraProgreso");
+
+  function cargarPregunta() {
+    if (
+      !preguntaEl ||
+      !opcionesEl ||
+      !resultadoEl ||
+      !progresoEl ||
+      !barraEl
+    )
+      return;
+
+    const pregunta = preguntas[actual];
+
+    preguntaEl.textContent = pregunta.pregunta;
+    resultadoEl.textContent = "";
+    progresoEl.textContent = `${actual + 1} / ${preguntas.length}`;
+
+    barraEl.style.width = `${((actual + 1) / preguntas.length) * 100}%`;
+
+    opcionesEl.innerHTML = "";
+
+    pregunta.opciones.forEach((opcion, index) => {
+      const boton = document.createElement("button");
+
+      boton.type = "button";
+      boton.textContent = opcion;
+
+      boton.className =
+        "w-full rounded-2xl border border-white/10 bg-white/10 px-5 py-4 text-left font-bold text-white transition hover:bg-pink-500 hover:shadow-lg";
+
+      boton.addEventListener("click", () => verificarRespuesta(index));
+
+      opcionesEl.appendChild(boton);
+    });
+  }
+
+  function verificarRespuesta(indice: number) {
+    if (respondiendo) return;
+
+    respondiendo = true;
+
+    if (!resultadoEl) return;
+
+    if (indice === preguntas[actual].correcta) {
+      resultadoEl.textContent = "✅ ¡Correcto! Muy bien.";
+      resultadoEl.className =
+        "mt-6 min-h-[32px] text-center text-lg font-black text-green-300";
+    } else {
+      resultadoEl.textContent = "❌ Esa no es la respuesta. ¡Sigue aprendiendo!";
+      resultadoEl.className =
+        "mt-6 min-h-[32px] text-center text-lg font-black text-pink-300";
+    }
+
+    setTimeout(() => {
+      actual++;
+
+      if (actual < preguntas.length) {
+        cargarPregunta();
+      } else {
+        if (preguntaEl) {
+          preguntaEl.textContent = "🎉 ¡Terminaste el test!";
+        }
+
+        if (opcionesEl) {
+          opcionesEl.innerHTML = "";
+        }
+
+        if (resultadoEl) {
+          resultadoEl.textContent = "💙 ¡Excelente trabajo!";
+          resultadoEl.className =
+            "mt-6 min-h-[32px] text-center text-lg font-black text-green-300";
+        }
+
+        if (progresoEl) {
+          progresoEl.textContent = "Completado";
+        }
+
+        if (barraEl) {
+          barraEl.style.width = "100%";
+        }
+      }
+
+      respondiendo = false;
+    }, 1200);
+  }
+
+  cargarPregunta();
+
+
+  /* =====================================================
+     JUEGO DE ARRASTRAR
+  ====================================================== */
+
+  const tarjetas = document.querySelectorAll(".tarjeta");
+  const correcto = document.getElementById("correcto");
+  const incorrecto = document.getElementById("incorrecto");
+  const mensajeJuego = document.getElementById("mensajeJuego");
+
+  tarjetas.forEach((tarjeta) => {
+    tarjeta.addEventListener("dragstart", (event) => {
+      const elemento = event.currentTarget as HTMLElement;
+
+      if (event.dataTransfer) {
+        event.dataTransfer.setData("text/plain", elemento.id);
+      }
+
+      elemento.classList.add("opacity-50");
+    });
+
+    tarjeta.addEventListener("dragend", (event) => {
+      const elemento = event.currentTarget as HTMLElement;
+
+      elemento.classList.remove("opacity-50");
+    });
+  });
+
+  function prepararZona(zona: HTMLElement | null, esCorrecta: boolean) {
+    if (!zona) return;
+
+    zona.addEventListener("dragover", (event) => {
+      event.preventDefault();
+
+      zona.classList.add(
+        esCorrecta
+          ? "bg-green-100"
+          : "bg-red-100"
+      );
+    });
+
+    zona.addEventListener("dragleave", () => {
+      zona.classList.remove(
+        esCorrecta
+          ? "bg-green-100"
+          : "bg-red-100"
+      );
+    });
+
+    zona.addEventListener("drop", (event) => {
+      event.preventDefault();
+
+      zona.classList.remove(
+        esCorrecta
+          ? "bg-green-100"
+          : "bg-red-100"
+      );
+
+      const id = event.dataTransfer?.getData("text/plain");
+
+      if (!id) return;
+
+      const correctos = ["t1", "t3", "t4", "t6"];
+      const incorrectos = ["t2", "t5"];
+
+      const esRespuestaCorrecta = esCorrecta
+        ? correctos.includes(id)
+        : incorrectos.includes(id);
+
+      if (mensajeJuego) {
+        if (esRespuestaCorrecta) {
+          mensajeJuego.textContent = "✅ ¡Muy bien! Esa es una acción segura.";
+          mensajeJuego.className =
+            "mt-6 min-h-[32px] text-center text-lg font-black text-green-600";
+        } else {
+          mensajeJuego.textContent = "❌ Esa acción no corresponde aquí. Intenta nuevamente.";
+          mensajeJuego.className =
+            "mt-6 min-h-[32px] text-center text-lg font-black text-red-600";
+        }
+      }
+
+      const tarjeta = document.getElementById(id);
+
+      if (tarjeta && esRespuestaCorrecta) {
+        zona.appendChild(tarjeta);
+
+        tarjeta.classList.remove(
+          "bg-white",
+          "text-purple-700"
+        );
+
+        tarjeta.classList.add(
+          esCorrecta
+            ? "bg-green-100"
+            : "bg-red-100"
+        );
+      }
+    });
+  }
+
+  prepararZona(correcto, true);
+  prepararZona(incorrecto, false);
+
+
+  /* =====================================================
+     SOPA DE LETRAS
+  ====================================================== */
+
+  const palabras = [
+    "RESPETO",
+    "CUIDADO",
+    "AYUDA",
+    "SEGURO",
+    "LIMITE",
+    "CONFIAR",
+    "HABLAR",
+  ];
+
+  const tamaño = 12;
+
+  let grid: string[][] = [];
+  let seleccionando = false;
+  let letrasSeleccionadas: string[] = [];
+  let celdasSeleccionadas: HTMLElement[] = [];
+  let encontradas = 0;
+
+  const gridEl = document.getElementById("grid");
+  const listaEl = document.getElementById("listaPalabras");
+  const contadorEl = document.getElementById("contador");
+  const ganasteEl = document.getElementById("ganaste");
+
+  function crearGrid() {
+    grid = Array.from(
+      { length: tamaño },
+      () => Array(tamaño).fill("")
+    );
+  }
+
+  function colocarPalabras() {
+    palabras.forEach((palabra) => {
+      let colocado = false;
+
+      while (!colocado) {
+        const fila = Math.floor(Math.random() * tamaño);
+        const col = Math.floor(Math.random() * tamaño);
+        const direccion = Math.random() > 0.5 ? "H" : "V";
+
+        if (
+          direccion === "H" &&
+          col + palabra.length <= tamaño
+        ) {
+          let puede = true;
+
+          for (let i = 0; i < palabra.length; i++) {
+            if (grid[fila][col + i] !== "") {
+              puede = false;
+              break;
+            }
+          }
+
+          if (puede) {
+            for (let i = 0; i < palabra.length; i++) {
+              grid[fila][col + i] = palabra[i];
+            }
+
+            colocado = true;
+          }
+        }
+
+        if (
+          direccion === "V" &&
+          fila + palabra.length <= tamaño
+        ) {
+          let puede = true;
+
+          for (let i = 0; i < palabra.length; i++) {
+            if (grid[fila + i][col] !== "") {
+              puede = false;
+              break;
+            }
+          }
+
+          if (puede) {
+            for (let i = 0; i < palabra.length; i++) {
+              grid[fila + i][col] = palabra[i];
+            }
+
+            colocado = true;
+          }
+        }
+      }
+    });
+  }
+
+  function rellenar() {
+    const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    for (let i = 0; i < tamaño; i++) {
+      for (let j = 0; j < tamaño; j++) {
+        if (grid[i][j] === "") {
+          grid[i][j] =
+            letras[Math.floor(Math.random() * letras.length)];
+        }
+      }
+    }
+  }
+
+  function crearListaPalabras() {
+    if (!listaEl) return;
+
+    listaEl.innerHTML = "";
+
+    palabras.forEach((palabra) => {
+      const div = document.createElement("div");
+
+      div.id = `word-${palabra}`;
+      div.textContent = palabra;
+
+      div.className =
+        "rounded-full bg-purple-100 px-4 py-2 text-sm font-black text-purple-700 transition";
+
+      listaEl.appendChild(div);
+    });
+  }
+
+  function dibujar() {
+    if (!gridEl) return;
+
+    gridEl.innerHTML = "";
+
+    grid.forEach((fila) => {
+      fila.forEach((letra) => {
+        const div = document.createElement("div");
+
+        div.textContent = letra;
+
+        div.className =
+          "flex h-7 w-7 cursor-pointer select-none items-center justify-center rounded-md bg-white text-xs font-black text-purple-900 shadow-sm transition hover:scale-105 hover:bg-pink-100 sm:h-8 sm:w-8 sm:text-sm md:h-9 md:w-9";
+
+        div.addEventListener("mousedown", () => {
+          seleccionando = true;
+
+          letrasSeleccionadas = [];
+          celdasSeleccionadas = [];
+
+          seleccionarCelda(div, letra);
+        });
+
+        div.addEventListener("mouseenter", () => {
+          if (seleccionando) {
+            if (!celdasSeleccionadas.includes(div)) {
+              seleccionarCelda(div, letra);
+            }
+          }
+        });
+
+        gridEl.appendChild(div);
+      });
+    });
+  }
+
+  function seleccionarCelda(
+    celda: HTMLElement,
+    letra: string
+  ) {
+    celda.classList.remove("bg-white");
+    celda.classList.add("bg-yellow-300", "scale-105");
+
+    letrasSeleccionadas.push(letra);
+    celdasSeleccionadas.push(celda);
+  }
+
+  function verificarPalabra() {
+    const palabra = letrasSeleccionadas.join("");
+
+    if (palabras.includes(palabra)) {
+      const elementoPalabra =
+        document.getElementById(`word-${palabra}`);
+
+      if (
+        elementoPalabra &&
+        !elementoPalabra.classList.contains("bg-green-500")
+      ) {
+        encontradas++;
+
+        elementoPalabra.classList.remove(
+          "bg-purple-100",
+          "text-purple-700"
+        );
+
+        elementoPalabra.classList.add(
+          "bg-green-500",
+          "text-white",
+          "line-through"
+        );
+
+        celdasSeleccionadas.forEach((celda) => {
+          celda.classList.remove("bg-yellow-300");
+          celda.classList.add("bg-green-500", "text-white");
+        });
+
+        if (contadorEl) {
+          contadorEl.textContent =
+            `Palabras encontradas: ${encontradas} / ${palabras.length}`;
+        }
+
+        if (
+          encontradas === palabras.length &&
+          ganasteEl
+        ) {
+          ganasteEl.classList.remove("hidden");
+        }
+      }
+    } else {
+      celdasSeleccionadas.forEach((celda) => {
+        celda.classList.remove("bg-yellow-300", "scale-105");
+        celda.classList.add("bg-white");
+      });
+    }
+
+    letrasSeleccionadas = [];
+    celdasSeleccionadas = [];
+  }
+
+  document.addEventListener("mouseup", () => {
+    if (seleccionando) {
+      verificarPalabra();
+    }
+
+    seleccionando = false;
+  });
+
+  crearGrid();
+  colocarPalabras();
+  rellenar();
+  crearListaPalabras();
+  dibujar();
+</script>
+

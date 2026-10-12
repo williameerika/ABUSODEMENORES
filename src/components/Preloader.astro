@@ -1,0 +1,210 @@
+
+<div class="preloader" id="site-preloader" aria-label="Cargando página">
+  <div class="preloader-content">
+    <div class="preloader-mark">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <path
+          d="M50 82 C39 70 14 53 14 34 C14 13 39 10 50 29 C61 10 86 13 86 34 C86 53 61 70 50 82Z"
+          stroke="url(#heart-gradient)"
+          stroke-width="7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M50 66 C43 58 31 50 31 40 C31 31 42 29 50 39 C58 29 69 31 69 40 C69 50 57 58 50 66Z"
+          fill="#F42F9B"
+        />
+        <defs>
+          <linearGradient id="heart-gradient" x1="10" y1="10" x2="90" y2="90">
+            <stop stop-color="#7900E8" />
+            <stop offset="1" stop-color="#FF329B" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <h1 class="preloader-title">
+      ABUSO<span>DEMENORES</span>
+    </h1>
+
+    <p class="preloader-subtitle">
+      Un espacio para informarte y pedir ayuda
+    </p>
+
+    <div class="preloader-track" role="progressbar"
+      aria-label="Cargando" aria-valuemin="0" aria-valuemax="100">
+      <div class="preloader-progress"></div>
+    </div>
+    <audio id="intro-sound" preload="auto">
+  <source src="/public/intro.mp3" type="audio/mpeg" />
+</audio>
+  </div>
+</div>
+
+<style>
+  .preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at 0% 10%, #eaf1ff 0%, transparent 35%),
+      radial-gradient(ellipse at 100% 5%, #ffe7f5 0%, transparent 34%),
+      radial-gradient(ellipse at 0% 100%, #ffeafb 0%, transparent 30%),
+      #fff;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.55s ease, visibility 0.55s ease;
+  }
+
+  .preloader::before,
+  .preloader::after {
+    position: absolute;
+    content: "✦";
+    color: #8b36ed;
+    font-size: 26px;
+    animation: float 2.4s ease-in-out infinite;
+  }
+
+  .preloader::before {
+    left: 17%;
+    top: 32%;
+  }
+
+  .preloader::after {
+    right: 18%;
+    top: 24%;
+    color: #ffbf20;
+    animation-delay: 0.5s;
+  }
+
+  .preloader-content {
+    width: min(90%, 720px);
+    text-align: center;
+    animation: appear 0.7s ease both;
+  }
+
+  .preloader-mark {
+    width: 112px;
+    height: 112px;
+    margin: 0 auto 24px;
+    animation: heartbeat 1.8s ease-in-out infinite;
+  }
+
+  .preloader-mark svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .preloader-title {
+    margin: 0;
+    color: #211b49;
+    font-size: clamp(27px, 5vw, 54px);
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1.1;
+  }
+
+  .preloader-title span {
+    color: #d414e9;
+  }
+
+  .preloader-subtitle {
+    margin: 18px 0 42px;
+    color: #30265d;
+    font-size: clamp(14px, 2vw, 21px);
+    line-height: 1.5;
+  }
+
+  .preloader-track {
+    width: min(90%, 340px);
+    height: 7px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 99px;
+    background: #f0eafa;
+  }
+
+  .preloader-progress {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #7900e8, #ff329b);
+    animation: loading 1.25s ease-in-out forwards;
+  }
+
+  .preloader.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  @keyframes loading {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes appear {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-10px) rotate(12deg); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .preloader *,
+    .preloader::before,
+    .preloader::after {
+      animation: none !important;
+    }
+
+    .preloader-progress {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  const preloader = document.querySelector('#site-preloader');
+
+  if (preloader) {
+    const hidePreloader = () => {
+      preloader.classList.add('is-hidden');
+
+      window.setTimeout(() => {
+        preloader.remove();
+      }, 600);
+    };
+
+    if (document.readyState === 'complete') {
+      window.setTimeout(hidePreloader, 1100);
+    } else {
+      window.addEventListener('load', () => {
+        window.setTimeout(hidePreloader, 1100);
+      }, { once: true });
+    }
+
+    // Evita bloquear la página si algún recurso tarda demasiado.
+    window.setTimeout(hidePreloader, 3000);
+  } 
+  const introSound = document.querySelector('#intro-sound');
+
+if (introSound) {
+  introSound.volume = 0.55;
+
+  introSound.play().catch(() => {
+    // El navegador puede bloquear el sonido automático.
+  });
+}
+</script>
